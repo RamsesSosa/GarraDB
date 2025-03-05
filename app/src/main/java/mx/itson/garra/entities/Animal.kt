@@ -18,6 +18,23 @@ class Animal {
         this.nombre = nombre
     }
 
+    fun get(context: Context) : List<Animal>{
+        var animales : MutableList<Animal> = ArrayList()
+        try {
+            val garraDB = GarraDB(context, "GarraDB", null, 1)
+            val dataBase : SQLiteDatabase = garraDB.readableDatabase
+
+            val result = dataBase.rawQuery("SELECT id, name FROM animales", null)
+            while (result.moveToNext()){
+                val animal = Animal(result.getInt(0), result.getString(1))
+                animales.add(animal)
+            }
+        }catch (ex : Exception){
+            Log.e("Error obteniendo registros", ex.message.toString())
+        }
+        return animales
+    }
+
     fun save(context: Context, nombre: String){
         try {
             val garraDB = GarraDB(context, "GarraDB", null, 1)

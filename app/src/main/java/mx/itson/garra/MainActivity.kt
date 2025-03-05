@@ -18,7 +18,8 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        Animal().save(this, "Tigre Toñin")
+        Animal().save(this, "Gato")
+        Animal().get(this)
 
     }
 }
