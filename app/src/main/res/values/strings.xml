@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Garra</string>
+    <string name="text_new">Nuevo registro de animal</string>
+    <string name="text_list">Consultar animales</string>
 </resources>
