@@ -30,7 +30,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         //Animal().get(this)
 
     }
-
     override fun onClick(v: View?) {
         when(v?.id){
             R.id.btn_new ->{
