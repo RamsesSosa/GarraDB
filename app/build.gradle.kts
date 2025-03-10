@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "mx.itson.garra"
-        minSdk = 30
+        minSdk = 27
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
