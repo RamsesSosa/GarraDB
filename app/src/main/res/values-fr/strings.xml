@@ -10,4 +10,7 @@
     <string name="text_ability">Capacité de l animal</string>
     <string name="text_save">Économiser</string>
     <string name="text_save_message">L animal a été sauvegardé correctement</string>
+    <string name="text_name_animal">Nom: </string>
+    <string name="text_specie_animal">Espèces: </string>
+    <string name="text_ability_animal">Capacité: </string>
 </resources>

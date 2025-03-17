@@ -38,9 +38,9 @@ class AnimalAdapter(
             val txtName: TextView = elemento.findViewById(R.id.animal_nombre)
             val txtSpecie: TextView = elemento.findViewById(R.id.animal_specie)
             val txtAbility: TextView = elemento.findViewById(R.id.animal_ability)
-            txtName.text = animal.nombre
-            txtSpecie.text = animal.especie
-            txtAbility.text = animal.habilidad
+            txtName.text = context.getString(R.string.text_name_animal) + " " + animal.nombre
+            txtSpecie.text = context.getString(R.string.text_specie_animal) + " " + animal.especie
+            txtAbility.text = context.getString(R.string.text_ability_animal) + " " + animal.habilidad
         }catch (ex : Exception){
             Log.e("Error al renderizar animales", ex.message.toString())
         }

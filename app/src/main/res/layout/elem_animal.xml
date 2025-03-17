@@ -13,7 +13,7 @@
             android:id="@+id/animal_nombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nombre del Animal"
+            android:text="Nombre del Animal: "
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@android:color/white"

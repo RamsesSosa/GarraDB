@@ -10,4 +10,7 @@
     <string name="text_ability">Anima ability</string>
     <string name="text_save">Save</string>
     <string name="text_save_message">Animal saved correctly</string>
+    <string name="text_name_animal">Name: </string>
+    <string name="text_specie_animal">Specie: </string>
+    <string name="text_ability_animal">Ability: </string>
 </resources>
