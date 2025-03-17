@@ -1,7 +1,12 @@
 package mx.itson.garramain
 
+import android.content.Context
+import android.os.Build
 import android.os.Bundle
 import android.view.View
+import android.os.VibrationEffect
+import android.os.Vibrator
+import android.os.VibratorManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -32,8 +37,16 @@ class AnimalFormActivity : AppCompatActivity(), View.OnClickListener {
                 val animalName = findViewById<EditText>(R.id.txt_name).text.toString()
                 val animalSpecie = findViewById<EditText>(R.id.txt_specie).text.toString()
                 val animalAbility = findViewById<EditText>(R.id.txt_ability).text.toString()
+                if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                    val vibratorAdmin = applicationContext.getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as VibratorManager
+                    val vibrator = vibratorAdmin.defaultVibrator
+                    vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE))
+                }else{
+                    val vibrator = applicationContext.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+                    vibrator.vibrate(300)
+                }
                 Animal().save(this, animalName, animalSpecie, animalAbility)
-                Toast.makeText(this,"Animal guardado correctamente", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,getString(R.string.text_save_message), Toast.LENGTH_SHORT).show()
 
                 finish()
             }

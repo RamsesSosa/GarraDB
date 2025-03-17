@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GarraMain</string>
+    <string name="text_welcome">Welcome to the Zoo</string>
+    <string name="text_new">New animal registration</string>
+    <string name="text_list">Consult animals</string>
+    <string name="text_register">Animal registration</string>
+    <string name="text_name">Animal name</string>
+    <string name="text_specie">Animal species</string>
+    <string name="text_ability">Anima ability</string>
+    <string name="text_save">Save</string>
+    <string name="text_save_message">Animal saved correctly</string>
+</resources>

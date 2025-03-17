@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GarraMain</string>
+    <string name="text_welcome">Bienvenue au zoo</string>
+    <string name="text_new">Enregistrement des nouveaux animaux</string>
+    <string name="text_list">Consulter les animaux</string>
+    <string name="text_register">Enregistrement des animaux</string>
+    <string name="text_name">Nom de l animal</string>
+    <string name="text_specie">Espèces d animaux</string>
+    <string name="text_ability">Capacité de l animal</string>
+    <string name="text_save">Économiser</string>
+    <string name="text_save_message">L animal a été sauvegardé correctement</string>
+</resources>
