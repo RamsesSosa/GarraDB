@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">GarraMain</string>
+    <string name="text_welcome">Bienvenido al Zoológico</string>
     <string name="text_new">Nuevo registro de animal</string>
     <string name="text_list">Consultar animales</string>
+    <string name="text_register">Registro de animal</string>
     <string name="text_name">Ingresa el nombre del animal</string>
     <string name="text_specie">Ingrese la especie del animal</string>
     <string name="text_ability">Ingrese la habilidad del animal</string>
