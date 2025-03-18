@@ -9,6 +9,7 @@
     <string name="text_ability">Habilidad del animal</string>
     <string name="text_save">Guardar</string>
     <string name="text_save_message">Animal guardado correctamente</string>
+    <string name="text_empty_message">Todos los campos son obligatorios</string>
     <string name="text_name_animal">Nombre: </string>
     <string name="text_specie_animal">Especie: </string>
     <string name="text_ability_animal">Habilidad: </string>

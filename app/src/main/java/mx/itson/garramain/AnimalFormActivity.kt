@@ -34,21 +34,27 @@ class AnimalFormActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when (v?.id) {
             R.id.btn_save -> {
-                val animalName = findViewById<EditText>(R.id.txt_name).text.toString()
-                val animalSpecie = findViewById<EditText>(R.id.txt_specie).text.toString()
-                val animalAbility = findViewById<EditText>(R.id.txt_ability).text.toString()
-                if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-                    val vibratorAdmin = applicationContext.getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as VibratorManager
-                    val vibrator = vibratorAdmin.defaultVibrator
-                    vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE))
-                }else{
-                    val vibrator = applicationContext.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
-                    vibrator.vibrate(300)
-                }
-                Animal().save(this, animalName, animalSpecie, animalAbility)
-                Toast.makeText(this,getString(R.string.text_save_message), Toast.LENGTH_SHORT).show()
+                val animalName = findViewById<EditText>(R.id.txt_name).text.toString().trim()
+                val animalSpecie = findViewById<EditText>(R.id.txt_specie).text.toString().trim()
+                val animalAbility = findViewById<EditText>(R.id.txt_ability).text.toString().trim()
 
-                finish()
+                // if para validar que los campos no esten vacios
+                if(animalName.isEmpty() || animalSpecie.isEmpty() || animalAbility.isEmpty()){
+                    Toast.makeText(this, getString(R.string.text_empty_message), Toast.LENGTH_SHORT).show()
+                }else{
+                    if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                        val vibratorAdmin = applicationContext.getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as VibratorManager
+                        val vibrator = vibratorAdmin.defaultVibrator
+                        vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE))
+                    }else{
+                        val vibrator = applicationContext.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+                        vibrator.vibrate(300)
+                    }
+                    Animal().save(this, animalName, animalSpecie, animalAbility)
+                    Toast.makeText(this,getString(R.string.text_save_message), Toast.LENGTH_SHORT).show()
+
+                    finish()
+                }
             }
         }
     }
